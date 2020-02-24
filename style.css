@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.attribution {
+  font-size: 16px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  height: 100%;
+  font-family: 'Be Vietnam', Geneva, Tahoma, sans-serif;
+}
+
+button {
+  background-color: hsl(12, 88%, 59%);
+  color: #fff;
+  transform: all 0.3s ease-out;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: hsl(13, 100%, 96%);
+  color: hsl(12, 88%, 59%);
+}
+
+.main-nav__link {
+  text-decoration: none;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: hsl(0, 0%, 98%);
+}
+
+@media only screen and (max-width: 645px) {
+  header {
+    margin-top: 2rem;
+  }
+  .cta {
+    display: none;
+  }
+
+  .top-logo {
+    position: relative;
+    padding-top: 20px;
+    padding-left: 30px;
+  }
+
+  .hamburger {
+    position: relative;
+    font-size: 1.5rem;
+    border-radius: 0;
+    padding: 20px;
+    float: right;
+  }
+
+  .hamburger::after,
+  .hamburger::before {
+    content: '';
+    height: 20px;
+    transform: rotate(135deg);
+    margin: -3px;
+    transition: transform 0.3s ease;
+  }
+
+  .hamburger--active::after {
+    transform: rotate(135deg);
+  }
+
+  .hamburger--active::before {
+    transform: rotate(45deg);
+  }
+
+  img .close {
+    display: none;
+  }
+
+  .main-nav {
+    position: relative;
+    display: flex;
+    float: right;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 5;
+  }
+
+  .main-nav--active {
+    transform: translateX(0);
+  }
+
+  .main-nav__link {
+    font-size: 2rem;
+    margin: 5px;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease;
+  }
+
+  .main-nav__link:hover {
+    border-bottom: 1px solid var(--light001);
+  }
+
+  .main-nav__link a {
+    padding: 10px 0;
+  }
+
+  main {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+
+  .sec-1 {
+    display: flex;
+    position: relative;
+    top: 1.3rem;
+    flex-direction: column-reverse;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    padding: 10%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sec-1 .text {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text h1 {
+    width: 100%;
+    color: hsl(233, 12%, 13%);
+    text-align: left;
+    align-items: center;
+    font-size: 3rem;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+  }
+
+  .text p {
+    line-height: 1.5;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text a {
+    margin: 20px 0;
+  }
+
+  .img {
+    position: relative;
+    /* height: 100%; */
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 646px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    flex-shrink: 1;
+  }
+
+  #main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 1;
+  }
+
+  #main-nav .main-nav__link {
+    padding: 0 15px;
+    margin: 0 5px;
+    display: inline-block;
+    align-items: center;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  .sec-1 {
+    margin: 0 10%;
+    top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-image: url('./images/bg-simplify-section-desktop.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: hsl(13, 100%, 96%);
+    height: 450px;
+  }
+
+  .sec-1 img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .sec-1 .text {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sec-1 .text h1 {
+    color: hsl(233, 12%, 13%);
+    font-size: 2rem;
+    padding: 0 20px;
+  }
+
+  .sec-1 .text p {
+    color: hsl(0, 4%, 50%);
+    line-height: 1.4;
+    font-size: 1.2rem;
+    padding: 0 20px;
+  }
+
+  .sec-1 .text a {
+    position: relative;
+    padding-left: 20px;
+  }
+
+  .sec-2 {
+    margin: 100px 10%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .sec-2 .left h1 {
+    color: hsl(233, 12%, 13%);
+    margin-bottom: 3rem;
+  }
+
+  .sec-2 .left p {
+    color: hsl(227, 12%, 61%);
+    line-height: 1.6;
+  }
+
+  .sec-2 .right {
+    display: inherit;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+
+  .sec-2 .right .top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+  }
+
+  .sec-2 .right .top button {
+    margin: 0 20px;
+  }
+
+  .sec-2 .right .btm p {
+    padding-left: 20px;
+  }
+
+  .sec-3 {
+    background: url('./images/bg-simplify-section-desktop.svg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .sec-3 h1 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .sec-3 .containers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    padding: 0 10%;
+  }
+
+  .sec-3 .containers .items img {
+    justify-content: center;
+    align-items: center;
+    margin: 0 20%;
+  }
+
+  .sec-3 .containers .name {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .quotes {
+    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sec-3 button {
+    justify-content: center;
+    text-emphasis: center;
+    align-items: center;
+    margin: 20px 40%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: hsl(12, 88%, 59%);
+    color: #fff;
+    transform: all 0.3s ease-out;
+  }
+
+  .sec-3 button:hover {
+    background-color: #fff;
+    color: hsl(12, 88%, 59%);
+  }
+
+  .sec-4 {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .sec-4 .top {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 175px;
+    background-color: hsl(12, 88%, 59%);
+    color: #fff;
+    margin-bottom: auto;
+  }
+
+  .sec-4 .top .text {
+    position: relative;
+    margin-top: 2rem;
+    margin-left: 20%;
+    align-items: center;
+  }
+
+  .sec-4 .top .text h2 {
+    text-align: left;
+    font-weight: 800;
+    font-size: 2rem;
+  }
+
+  .sec-4 .top button {
+    margin-top: 3.5rem;
+    background-color: hsl(13, 100%, 96%);
+    color: hsl(12, 88%, 59%);
+    transition: all 0.4s ease-out;
+    margin-left: 40%;
+  }
+
+  .sec-4 .top button:hover {
+    color: hsl(13, 100%, 96%);
+    background-color: hsl(12, 88%, 59%);
+  }
+
+  .sec-4 .bottom {
+    background-color: hsl(228, 39%, 23%);
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    padding-left: 10%;
+    padding-top: 50px;
+  }
+
+  .sec-4 .bottom .btm-col-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sec-4 .bottom .btm-col-2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .sec-4 .bottom .btm-col-1 .one {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-evenly;
+  }
+
+  .sec-4 .bottom .btm-col-1 .one .sec-4-link {
+    padding-bottom: 30px;
+  }
+  .sec-4 .bottom .btm-col-1 .one .sec-4-link .links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .sec-4 .bottom .links a {
+    padding: 5px;
+  }
+
+  .sec-4 .bottom .btm-col-1 ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-shrink: 1;
+  }
+
+  .sec-4 .bottom .btm-col-2 .btm-col-2b .contact {
+    margin-bottom: 1.5rem;
+  }
+
+  .sec-4 .bottom .btm-col-2 .btm-col-2b input {
+    padding: 10px;
+    line-height: 0.9;
+    border-radius: 20px;
+    margin: 0 10px 10px 0;
+  }
+
+  .sec-4 .bottom .btm-col-2 p {
+    color: hsl(0, 0%, 98%);
+  }
+}
