@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap');
 
+:root {
+  --dark001: #1a1b1c;
+  --light001: #fafcfe;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -52,6 +57,9 @@ ul li a {
 }
 
 @media only screen and (max-width: 645px) {
+  body {
+    width: 100vw;
+  }
   header {
     margin-top: 2rem;
   }
@@ -61,16 +69,15 @@ ul li a {
 
   .top-logo {
     position: relative;
-    padding-top: 20px;
     padding-left: 30px;
   }
 
   .hamburger {
-    position: relative;
-    font-size: 1.5rem;
+    position: absolute;
+    font-size: 1.2rem;
     border-radius: 0;
-    padding: 20px;
-    float: right;
+    /* padding: 20px; */
+    right: 5px;
   }
 
   .hamburger::after,
@@ -106,6 +113,7 @@ ul li a {
     background-color: #fff;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
+    opacity: 0.8;
     z-index: 5;
   }
 
@@ -127,6 +135,7 @@ ul li a {
 
   .main-nav__link a {
     padding: 10px 0;
+    font-size: 0.8rem;
   }
 
   main {
@@ -135,50 +144,218 @@ ul li a {
   }
 
   .sec-1 {
-    display: flex;
-    position: relative;
-    top: 1.3rem;
-    flex-direction: column-reverse;
-    flex-shrink: 1;
-    flex-wrap: wrap;
-    padding: 10%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    width: 100vw;
     justify-content: center;
     align-items: center;
   }
 
+  .sec-1 img {
+    grid-row: 1 / span 1;
+    height: 100%;
+    width: 80%;
+    margin: 10% 10% 0 10%;
+  }
+
   .sec-1 .text {
+    grid-row: 2 / span 1;
+    padding: 0 10%;
+    width: 100%;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    flex-shrink: 1;
-    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
     align-items: center;
   }
 
   .text h1 {
     width: 100%;
     color: hsl(233, 12%, 13%);
-    text-align: left;
+    text-align: center;
     align-items: center;
-    font-size: 3rem;
-    line-height: 1.5;
-    overflow-wrap: break-word;
+    font-size: 2rem;
+    line-height: 150%;
+    padding: 0;
   }
 
   .text p {
-    line-height: 1.5;
+    line-height: 120%;
+    width: 100%;
     justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 20px 0;
+  }
+
+  .sec-2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .sec-2 .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 50px;
+  }
+
+  .sec-2 .left h1 {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 2.2rem;
+    padding-bottom: 10px;
+    color: #1a1b1c;
+    line-height: 200%;
+  }
+
+  .sec-2 .left p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: hsl(0, 4%, 50%);
+  }
+
+  .sec-2 .right {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+  }
+
+  .right .top {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    padding: 10px 10px;
+  }
+
+  .right .top h3 {
+    padding: 5px 10px;
+    background-color: hsl(13, 100%, 96%);
+    border-radius: 50px;
+    width: 100%;
+  }
+
+  .right .btm {
+    padding: 10px;
+    text-align: start;
+    align-items: center;
+    justify-content: center;
+    line-height: 2;
+  }
+
+  .btm p {
+    padding: 0 10%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sec-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
   }
 
-  .text a {
-    margin: 20px 0;
+  .sec-3 h1 {
+    padding: 20px 10%;
+    width: 100%;
   }
 
-  .img {
+  .sec-3 .containers {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 5%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .containers h4 {
+    padding: 20px 0;
+  }
+
+  .sec-3 button {
     position: relative;
-    /* height: 100%; */
+    margin-top: 100px;
+  }
+
+  .sec-4 {
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+  }
+
+  .sec-4 .top {
+    background-color: hsl(12, 88%, 59%);
+    height: 400px;
     width: 100%;
+  }
+
+  .top h2 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 50px 10px;
+  }
+
+  .top button {
+    background-color: #fff;
+    color: hsl(12, 88%, 59%);
+  }
+
+  .top button:hover {
+    color: #fff;
+    background-color: hsl(12, 88%, 59%);
+  }
+
+  .sec-4 .bottom {
+    /* margin-top: 40px; */
+    background: hsl(228, 39%, 23%);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+      'request request request'
+      'col-1b . col-2a'
+      'links'
+      '. logo .'
+      'right right right';
+  }
+
+  .sec-4 .bottom img {
+    grid-area: logo;
+  }
+
+  .sec-4 .bottom .links {
+    grid-area: links;
+  }
+
+  .sec-4 .bottom .btm-col-1-b {
+    grid-area: col-1b;
+  }
+
+  .sec-4 .bottom .btm-col-2a {
+    grid-area: col-2a;
+  }
+
+  .sec-4 .bottom .request {
+    grid-area: request;
+  }
+
+  .sec-4 .bottom .right {
+    grid-area: right;
   }
 }
 
